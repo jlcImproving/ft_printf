@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_i.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 18:03:04 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/16 18:10:16 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:06:15 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ t_list	*ft_lstnew_i(void const *content, size_t content_size)
 {
 	t_list		*list;
 
-	if (!(list = (t_list*)malloc(sizeof(t_list))))
+	list = ((t_list *)malloc(sizeof(t_list)));
+	if (!list)
 		return (NULL);
 	if (content == NULL)
 	{

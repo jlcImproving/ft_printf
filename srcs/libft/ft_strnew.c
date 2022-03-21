@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:00:24 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:00:41 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:31:12 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 
 	if (size >= 9223372036854775807)
 		return (NULL);
-	arr = (char*)malloc(sizeof(char) * (size + 1));
+	arr = (char *)malloc(sizeof(char) * (size + 1));
 	if (!arr)
 		return (NULL);
 	arr[size] = '\0';

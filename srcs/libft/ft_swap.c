@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:39:02 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:39:11 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:38:06 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap(int *start, int *end)
 {
-	int copy;
+	int	copy;
 
 	copy = *start;
 	*start = *end;

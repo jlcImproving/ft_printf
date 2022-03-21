@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:02:25 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:02:34 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:21:38 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 void	ft_striter(char *s, void (*f)(char*))
 {
 	if (s && f)
+	{
 		while (*s != '\0')
 		{
 			f(s);
 			s++;
 		}
+	}
 }

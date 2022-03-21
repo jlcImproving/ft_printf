@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 23:07:18 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:07:56 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:23:56 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

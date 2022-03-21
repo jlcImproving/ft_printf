@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 13:52:41 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 13:52:52 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:10:24 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*pointer2;
 	unsigned int	i;
 
-	pointer1 = (unsigned char*)dst;
-	pointer2 = (unsigned char*)src;
+	pointer1 = (unsigned char *)dst;
+	pointer2 = (unsigned char *)src;
 	i = 0;
 	while (n)
 	{

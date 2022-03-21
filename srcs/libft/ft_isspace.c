@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:37:36 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:37:45 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 15:44:42 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isspace(int c)
 {
-	if (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t' ||
-	c == '\v')
+	if (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'
+		|| c == '\v')
 		return (1);
 	return (0);
 }

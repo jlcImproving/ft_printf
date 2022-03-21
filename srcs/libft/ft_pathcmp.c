@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pathcmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:41:58 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/13 14:42:11 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:12:46 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_pathcmp(char *p1, char *p2)
+int	ft_pathcmp(char *p1, char *p2)
 {
 	while (*p1 && *p1 == *p2)
 	{
