@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaocharneca <joaocharneca@student.42.fr>  +#+  +:+       +#+        */
+/*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:28:54 by jde-alme          #+#    #+#             */
-/*   Updated: 2022/03/16 20:24:44 by joaocharneca     ###   ########.fr       */
+/*   Updated: 2022/03/21 16:44:06 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../includes/libft.h"
 # include <stdarg.h>
 
-typedef	struct	s_flags
+typedef struct s_flags
 {
 	int	already_print;
 	int	type;
