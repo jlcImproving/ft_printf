@@ -6,7 +6,7 @@
 /*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:31:00 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/18 17:19:45 by jde-alme         ###   ########.fr       */
+/*   Updated: 2022/03/21 14:44:03 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ char	*ft_u_itoa(unsigned int n)
 	len = ft_estim(nbr);
 	rtn = 0;
 	isneg = 0;
-	if (!(rtn = ft_gen(rtn, nbr, len, isneg)))
+	rtn = ft_gen(rtn, nbr, len, isneg);
+	if (!(rtn))
 		return (0);
 	return (rtn);
 }

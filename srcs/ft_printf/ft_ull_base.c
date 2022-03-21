@@ -6,7 +6,7 @@
 /*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:31:47 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/18 17:21:45 by jde-alme         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:01:12 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ char	*ft_ull_base(unsigned long long ull, int base)
 		ull /= base;
 		count++;
 	}
-	if (!(rtn = malloc(sizeof(char) * (count + 1))))
+	rtn = malloc(sizeof(char) * (count + 1));
+	if (!(rtn))
 		return (0);
 	rtn[count] = '\0';
 	rtn = treat_base(ull_save, base, rtn, count);

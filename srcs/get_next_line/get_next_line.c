@@ -6,7 +6,7 @@
 /*   By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 14:45:16 by joaocharneca      #+#    #+#             */
-/*   Updated: 2022/03/18 17:10:47 by jde-alme         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:01:07 by jde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static t_list	*get_buflist(const int fd, t_list **list)
 {
-	t_list				*plist;
+	t_list	*plist;
 
 	plist = *list;
 	while (plist)
@@ -23,9 +23,11 @@ static t_list	*get_buflist(const int fd, t_list **list)
 			return (plist);
 		plist = plist->next;
 	}
-	if (!(plist = ft_lstnew_i(NULL, 0)))
+	plist = ft_lstnew_i(NULL, 0);
+	if (!plist)
 		return (NULL);
-	if (!(plist->content = ft_strnew_i (0)))
+	plist->content = ft_strnew_i (0);
+	if (!(plist->content))
 	{
 		free(plist);
 		return (NULL);
@@ -37,18 +39,21 @@ static t_list	*get_buflist(const int fd, t_list **list)
 
 static int	read_line(char **buf, int fd)
 {
-	int					readbytes;
-	char				*copy_buf;
-	char				*readbuf;
+	int		readbytes;
+	char	*copy_buf;
+	char	*readbuf;
 
-	if (!(readbuf = ft_strnew_i(GNL_BUFF_SIZE)))
+	readbuf = ft_strnew_i(GNL_BUFF_SIZE);
+	if (!readbuf)
 		return (-1);
-	while ((readbytes = read(fd, readbuf, GNL_BUFF_SIZE)))
+	readbytes = read(fd, readbuf, GNL_BUFF_SIZE);
+	while (readbytes)
 	{
 		if (readbytes == -1)
 			return (-1);
 		readbuf[readbytes] = '\0';
-		if (!(copy_buf = ft_strjoin(*buf, readbuf)))
+		copy_buf = ft_strjoin(*buf, readbuf);
+		if (!copy_buf)
 			return (-1);
 		free(*buf);
 		*buf = copy_buf;
@@ -59,16 +64,18 @@ static int	read_line(char **buf, int fd)
 	return (readbytes);
 }
 
-static char				*get_line(char **buf, char *pos_chr)
+static char	*get_line(char **buf, char *pos_chr)
 {
-	char				*copy_buf;
-	char				*line;
+	char	*copy_buf;
+	char	*line;
 
 	if (pos_chr)
 		*pos_chr = '\0';
-	if (!(line = ft_strdup(*buf)))
+	line = ft_strdup(*buf);
+	if (!line)
 		return (NULL);
-	if (!(copy_buf = ft_strdup(!pos_chr ? ft_strchr(*buf, 0) : pos_chr + 1)))
+	copy_buf = ft_strdup(!pos_chr ? ft_strchr(*buf, 0) : pos_chr + 1);
+	if (!copy_buf)
 	{
 		free(line);
 		return (NULL);
@@ -88,18 +95,22 @@ int	get_next_line(const int fd, char **line)
 	if (fd == -1)
 		return (-1);
 	buflist = get_buflist(fd, &list);
-	if ((pos_chr = ft_strchr((char *)buflist->content, 10)))
+	pos_chr = ft_strchr((char *)buflist->content, 10);
+	if (pos_chr)
 	{
-		if (!(*line = get_line((char **)&(buflist->content), pos_chr)))
+		*line = get_line((char **)&(buflist->content), pos_chr);
+		if (!*line)
 			return (-1);
 		return (1);
 	}
-	if ((fr = read_line((char **)&(buflist->content), fd)) == -1)
+	fr = read_line((char **)&(buflist->content), fd);
+	if (fr == -1)
 		return (-1);
 	if (!*((char *)buflist->content) && !fr)
 		return (0);
-	if (!(*line = get_line((char **)&(buflist->content),
-				ft_strchr((char *)buflist->content, 10))))
+	*line = get_line((char **)&(buflist->content),
+			ft_strchr((char *)buflist->content, 10));
+	if (!*line)
 		return (-1);
 	return (1);
 }
