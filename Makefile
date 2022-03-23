@@ -6,7 +6,7 @@
 #    By: jde-alme <jde-alme@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 19:15:16 by jde-alme          #+#    #+#              #
-#    Updated: 2022/03/21 16:40:04 by jde-alme         ###   ########.fr        #
+#    Updated: 2022/03/23 20:27:52 by jde-alme         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,109 +25,12 @@ FT_PRINTF_DIR =	ft_printf
 SRC_FLS	=		$(LIBFT_FLS)\
 				$(FT_PRINTF_FLS)\
 
-LIBFT_FLS = 	$(LIBFT_DIR)/ft_memset.c		\
-				$(LIBFT_DIR)/ft_bzero.c			\
-				$(LIBFT_DIR)/ft_memcpy.c		\
-				$(LIBFT_DIR)/ft_memccpy.c		\
-				$(LIBFT_DIR)/ft_memmove.c		\
-				$(LIBFT_DIR)/ft_memchr.c		\
-				$(LIBFT_DIR)/ft_memcmp.c		\
-				$(LIBFT_DIR)/ft_strlen.c		\
-				$(LIBFT_DIR)/ft_isalpha.c		\
-				$(LIBFT_DIR)/ft_isdigit.c		\
-				$(LIBFT_DIR)/ft_isalnum.c		\
-				$(LIBFT_DIR)/ft_isascii.c		\
-				$(LIBFT_DIR)/ft_isprint.c		\
-				$(LIBFT_DIR)/ft_toupper.c		\
-				$(LIBFT_DIR)/ft_tolower.c		\
-				$(LIBFT_DIR)/ft_strchr.c		\
-				$(LIBFT_DIR)/ft_strrchr.c		\
-				$(LIBFT_DIR)/ft_strncmp.c		\
-				$(LIBFT_DIR)/ft_strlcpy.c		\
-				$(LIBFT_DIR)/ft_strlcat.c		\
-				$(LIBFT_DIR)/ft_strnstr.c		\
-				$(LIBFT_DIR)/ft_atoi.c			\
-				$(LIBFT_DIR)/ft_calloc.c		\
-				$(LIBFT_DIR)/ft_strdup.c		\
-				$(LIBFT_DIR)/ft_substr.c		\
-				$(LIBFT_DIR)/ft_strjoin.c		\
-				$(LIBFT_DIR)/ft_strtrim.c		\
-				$(LIBFT_DIR)/ft_split.c			\
-				$(LIBFT_DIR)/ft_itoa.c			\
-				$(LIBFT_DIR)/ft_strmapi.c		\
-				$(LIBFT_DIR)/ft_putchar_fd.c	\
-				$(LIBFT_DIR)/ft_putstr_fd.c		\
-				$(LIBFT_DIR)/ft_putendl_fd.c	\
-				$(LIBFT_DIR)/ft_putnbr_fd.c		\
-				$(LIBFT_DIR)/ft_lstnew.c		\
-				$(LIBFT_DIR)/ft_lstadd_front.c	\
-				$(LIBFT_DIR)/ft_lstsize.c		\
-				$(LIBFT_DIR)/ft_lstlast.c		\
-				$(LIBFT_DIR)/ft_lstadd_back.c	\
-				$(LIBFT_DIR)/ft_lstclear.c		\
-				$(LIBFT_DIR)/ft_lstdelone.c		\
-				$(LIBFT_DIR)/ft_lstiter.c		\
-				$(LIBFT_DIR)/ft_lstmap.c		\
-				$(LIBFT_DIR)/ft_lstnew_i.c		\
-				$(LIBFT_DIR)/ft_strlen.c\
-				$(LIBFT_DIR)/ft_strdup.c\
-				$(LIBFT_DIR)/ft_strcmp.c			\
-				$(LIBFT_DIR)/ft_memset.c\
-				$(LIBFT_DIR)/ft_bzero.c\
-				$(LIBFT_DIR)/ft_memcpy.c\
-				$(LIBFT_DIR)/ft_memccpy.c			\
-				$(LIBFT_DIR)/ft_memmove.c\
-				$(LIBFT_DIR)/ft_memchr.c\
-				$(LIBFT_DIR)/ft_memcmp.c\
-				$(LIBFT_DIR)/ft_strcpy.c			\
-				$(LIBFT_DIR)/ft_strncpy.c\
-				$(LIBFT_DIR)/ft_strcat.c\
-				$(LIBFT_DIR)/ft_strchr.c\
-				$(LIBFT_DIR)/ft_strrchr.c\
-				$(LIBFT_DIR)/ft_strstr.c			\
-				$(LIBFT_DIR)/ft_strnstr.c\
-				$(LIBFT_DIR)/ft_strncmp.c\
-				$(LIBFT_DIR)/ft_atoi.c\
-				$(LIBFT_DIR)/ft_isdigit.c\
-				$(LIBFT_DIR)/ft_isalpha.c\
-				$(LIBFT_DIR)/ft_isalnum.c\
-				$(LIBFT_DIR)/ft_isascii.c\
-				$(LIBFT_DIR)/ft_isprint.c\
-				$(LIBFT_DIR)/ft_toupper.c\
-				$(LIBFT_DIR)/ft_tolower.c\
-				$(LIBFT_DIR)/ft_memdel.c\
-				$(LIBFT_DIR)/ft_strnew.c			\
-				$(LIBFT_DIR)/ft_strdel.c			\
-				$(LIBFT_DIR)/ft_strclr.c\
-				$(LIBFT_DIR)/ft_striter.c			\
-				$(LIBFT_DIR)/ft_striteri.c\
-				$(LIBFT_DIR)/ft_strmapi.c\
-				$(LIBFT_DIR)/ft_strequ.c\
-				$(LIBFT_DIR)/ft_strnequ.c			\
-				$(LIBFT_DIR)/ft_strjoin.c\
-				$(LIBFT_DIR)/ft_strtrim.c			\
-				$(LIBFT_DIR)/ft_putchar.c\
-				$(LIBFT_DIR)/ft_putstr.c\
-				$(LIBFT_DIR)/ft_putchar_fd.c\
-				$(LIBFT_DIR)/ft_putstr_fd.c			\
-				$(LIBFT_DIR)/ft_putendl_fd.c\
-				$(LIBFT_DIR)/ft_putnbr_fd.c			\
-				$(LIBFT_DIR)/ft_itoa.c\
-				$(LIBFT_DIR)/ft_strlcat.c\
-				$(LIBFT_DIR)/ft_strncat.c\
-				$(LIBFT_DIR)/ft_lstnew.c			\
-				$(LIBFT_DIR)/ft_lstdelone.c\
-				$(LIBFT_DIR)/ft_lstadd.c\
-				$(LIBFT_DIR)/ft_lstiter.c\
-				$(LIBFT_DIR)/ft_lstmap.c			\
-				$(LIBFT_DIR)/ft_isspace.c			\
-				$(LIBFT_DIR)/ft_isupper.c\
-				$(LIBFT_DIR)/ft_swap.c				\
-				$(LIBFT_DIR)/ft_min.c\
-				$(LIBFT_DIR)/ft_max.c\
-				$(LIBFT_DIR)/ft_pathcmp.c			\
-				$(LIBFT_DIR)/ft_pow.c\
-				$(LIBFT_DIR)/ft_abs.c\
+LIBFT_FLS = 	$(LIBFT_DIR)/ft_isdigit.c			\
+				$(LIBFT_DIR)/ft_strdup.c			\
+				$(LIBFT_DIR)/ft_putchar_fd.c		\
+				$(LIBFT_DIR)/ft_strlen.c			\
+				$(LIBFT_DIR)/ft_tolower.c			\
+				$(LIBFT_DIR)/ft_itoa.c				\
 
 FT_PRINTF_FLS = $(FT_PRINTF_DIR)/ft_printf.c		\
 				$(FT_PRINTF_DIR)/ft_treatment.c 	\
